@@ -40,5 +40,11 @@ namespace JCDecauxSoapClient
             ((ComboBox)sender).DisplayMemberPath = "name";
             gateway.Close();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string name = ((Contract)((ComboBox)sender).SelectedItem).name;
+            Console.WriteLine(name + " has been selected");
+        }
     }
 }

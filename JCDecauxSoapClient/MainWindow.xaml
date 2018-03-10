@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JCDecauxSoapClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="529.333" Width="525">
     <Grid>
-        <ComboBox HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="497" Initialized="ComboBox_Initialized"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="497" Initialized="ComboBox_Initialized" SelectionChanged="ComboBox_SelectionChanged"/>
         <Label Content="Choose a city :" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+        <Label Content="Choose a station :&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="26"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="497"/>
+
     </Grid>
 </Window>
