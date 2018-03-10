@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCDecauxSoapGateway", "JCDecauxSoapGateway\JCDecauxSoapGateway.csproj", "{03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCDecauxSoapClient", "JCDecauxSoapClient\JCDecauxSoapClient.csproj", "{CE3F4BD9-C375-4EE1-B4B6-6A387D9948C1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8} = {03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

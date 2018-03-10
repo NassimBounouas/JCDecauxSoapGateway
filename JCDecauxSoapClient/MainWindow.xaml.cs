@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using JCDecauxSoapClient.JCDecauxSoapGateway;
 
 namespace JCDecauxSoapClient
 {
@@ -23,6 +24,21 @@ namespace JCDecauxSoapClient
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void TextBox_Initialized(object sender, EventArgs e)
+        {
+            SoapGatewayClient gateway = new SoapGatewayClient();
+            CompositeType com = new CompositeType();
+            com.StringValue = "Nassim";
+            com.BoolValue = true;
+            
+
+            CompositeType compo = gateway.GetDataUsingDataContract(com);
+            Console.WriteLine(compo.StringValue);
+            ((TextBox)sender).Text = gateway.GetStations("wawa");
+            gateway.Close();
         }
     }
 }

@@ -75,55 +75,55 @@ namespace JCDecauxSoapClient.JCDecauxSoapGateway {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="JCDecauxSoapGateway.IService1")]
-    public interface IService1 {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="JCDecauxSoapGateway.SoapGateway")]
+    public interface SoapGateway {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetStations", ReplyAction="http://tempuri.org/SoapGateway/GetStationsResponse")]
+        string GetStations(string city);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetStations", ReplyAction="http://tempuri.org/SoapGateway/GetStationsResponse")]
+        System.Threading.Tasks.Task<string> GetStationsAsync(string city);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetDataUsingDataContract", ReplyAction="http://tempuri.org/SoapGateway/GetDataUsingDataContractResponse")]
         JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType GetDataUsingDataContract(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetDataUsingDataContract", ReplyAction="http://tempuri.org/SoapGateway/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType> GetDataUsingDataContractAsync(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : JCDecauxSoapClient.JCDecauxSoapGateway.IService1, System.ServiceModel.IClientChannel {
+    public interface SoapGatewayChannel : JCDecauxSoapClient.JCDecauxSoapGateway.SoapGateway, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<JCDecauxSoapClient.JCDecauxSoapGateway.IService1>, JCDecauxSoapClient.JCDecauxSoapGateway.IService1 {
+    public partial class SoapGatewayClient : System.ServiceModel.ClientBase<JCDecauxSoapClient.JCDecauxSoapGateway.SoapGateway>, JCDecauxSoapClient.JCDecauxSoapGateway.SoapGateway {
         
-        public Service1Client() {
+        public SoapGatewayClient() {
         }
         
-        public Service1Client(string endpointConfigurationName) : 
+        public SoapGatewayClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public Service1Client(string endpointConfigurationName, string remoteAddress) : 
+        public SoapGatewayClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SoapGatewayClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SoapGatewayClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public string GetStations(string city) {
+            return base.Channel.GetStations(city);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<string> GetStationsAsync(string city) {
+            return base.Channel.GetStationsAsync(city);
         }
         
         public JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType GetDataUsingDataContract(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite) {
