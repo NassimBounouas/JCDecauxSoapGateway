@@ -92,18 +92,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService.wsdl" />
+    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\JCDecauxSoapGateway\JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\Service1.wsdl" />
-    <None Include="Connected Services\JCDecauxSoapGateway\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\Service11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\Service12.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -61,12 +61,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="GatewayService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
+    <Compile Include="GatewayService.svc.cs">
+      <DependentUpon>GatewayService.svc</DependentUpon>
     </Compile>
     <Compile Include="SoapGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

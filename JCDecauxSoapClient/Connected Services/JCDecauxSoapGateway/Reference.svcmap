@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:52428/Service1.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:52428/GatewayService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="7d7e1ba3-9725-42d9-a3d6-85b2956b580b" SourceId="1" SourceUrl="http://localhost:52428/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="1b93702c-774e-47ac-91ae-8fdb31a370ba" SourceId="1" SourceUrl="http://localhost:52428/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="a3a74648-0d74-45b1-921e-fec4a4c628dc" SourceId="1" SourceUrl="http://localhost:52428/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="1b727264-cee3-444c-b83b-00ec4cfa1281" SourceId="1" SourceUrl="http://localhost:52428/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="GatewayService.xsd" MetadataType="Schema" ID="6f9e3990-4a3c-414c-bcc8-062e21b68e43" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GatewayService.wsdl" MetadataType="Wsdl" ID="ca7ac6c8-943f-4e54-8dbf-6b15a17fb1ed" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?wsdl" />
+    <MetadataFile FileName="GatewayService1.xsd" MetadataType="Schema" ID="5955ad0a-6911-46bd-8303-77683ba205bd" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GatewayService2.xsd" MetadataType="Schema" ID="ac175b3c-17ea-44dc-9f4d-d1db19f6848a" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
