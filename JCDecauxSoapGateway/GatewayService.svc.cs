@@ -13,9 +13,18 @@ namespace JCDecauxSoapGateway
     public class GatewayService : SoapGateway
     {
         int value = 0;
-        private GatewayService()
+        private static ServiceConfiguration config = null;
+        private GatewayService(int value)
         {
             value = 5;
+        }
+
+        public GatewayService()
+        {
+            if (config == null)
+            {
+                GatewayService.config = new ServiceConfiguration("config.json");
+            }
         }
 
         public string GetStations(string city)
