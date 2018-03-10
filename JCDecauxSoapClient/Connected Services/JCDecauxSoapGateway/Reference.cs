@@ -15,18 +15,18 @@ namespace JCDecauxSoapClient.JCDecauxSoapGateway {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Contract", Namespace="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway.JcDecauxObjects")]
     [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Contract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
+        private string commercial_nameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
+        private string nameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -39,27 +39,27 @@ namespace JCDecauxSoapClient.JCDecauxSoapGateway {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public string commercial_name {
             get {
-                return this.BoolValueField;
+                return this.commercial_nameField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((object.ReferenceEquals(this.commercial_nameField, value) != true)) {
+                    this.commercial_nameField = value;
+                    this.RaisePropertyChanged("commercial_name");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public string name {
             get {
-                return this.StringValueField;
+                return this.nameField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
                 }
             }
         }
@@ -79,16 +79,16 @@ namespace JCDecauxSoapClient.JCDecauxSoapGateway {
     public interface SoapGateway {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetStations", ReplyAction="http://tempuri.org/SoapGateway/GetStationsResponse")]
-        string GetStations(string city);
+        string[] GetStations(string city);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetStations", ReplyAction="http://tempuri.org/SoapGateway/GetStationsResponse")]
-        System.Threading.Tasks.Task<string> GetStationsAsync(string city);
+        System.Threading.Tasks.Task<string[]> GetStationsAsync(string city);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetDataUsingDataContract", ReplyAction="http://tempuri.org/SoapGateway/GetDataUsingDataContractResponse")]
-        JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType GetDataUsingDataContract(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetContracts", ReplyAction="http://tempuri.org/SoapGateway/GetContractsResponse")]
+        JCDecauxSoapClient.JCDecauxSoapGateway.Contract[] GetContracts();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetDataUsingDataContract", ReplyAction="http://tempuri.org/SoapGateway/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType> GetDataUsingDataContractAsync(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/SoapGateway/GetContracts", ReplyAction="http://tempuri.org/SoapGateway/GetContractsResponse")]
+        System.Threading.Tasks.Task<JCDecauxSoapClient.JCDecauxSoapGateway.Contract[]> GetContractsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -118,20 +118,20 @@ namespace JCDecauxSoapClient.JCDecauxSoapGateway {
                 base(binding, remoteAddress) {
         }
         
-        public string GetStations(string city) {
+        public string[] GetStations(string city) {
             return base.Channel.GetStations(city);
         }
         
-        public System.Threading.Tasks.Task<string> GetStationsAsync(string city) {
+        public System.Threading.Tasks.Task<string[]> GetStationsAsync(string city) {
             return base.Channel.GetStationsAsync(city);
         }
         
-        public JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType GetDataUsingDataContract(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContract(composite);
+        public JCDecauxSoapClient.JCDecauxSoapGateway.Contract[] GetContracts() {
+            return base.Channel.GetContracts();
         }
         
-        public System.Threading.Tasks.Task<JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType> GetDataUsingDataContractAsync(JCDecauxSoapClient.JCDecauxSoapGateway.CompositeType composite) {
-            return base.Channel.GetDataUsingDataContractAsync(composite);
+        public System.Threading.Tasks.Task<JCDecauxSoapClient.JCDecauxSoapGateway.Contract[]> GetContractsAsync() {
+            return base.Channel.GetContractsAsync();
         }
     }
 }

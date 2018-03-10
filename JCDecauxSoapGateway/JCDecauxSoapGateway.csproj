@@ -68,10 +68,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIHandler\DataCache.cs" />
+    <Compile Include="APIHandler\RestCaller.cs" />
     <Compile Include="GatewayService.svc.cs">
       <DependentUpon>GatewayService.svc</DependentUpon>
     </Compile>
     <Compile Include="configuration\ServiceConfiguration.cs" />
+    <Compile Include="JcDecauxObjects\Contract.cs" />
     <Compile Include="SoapGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

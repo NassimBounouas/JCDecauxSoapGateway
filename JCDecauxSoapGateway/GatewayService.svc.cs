@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JCDecauxSoapGateway.APIHandler;
+using JCDecauxSoapGateway.JcDecauxObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -12,12 +14,8 @@ namespace JCDecauxSoapGateway
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class GatewayService : SoapGateway
     {
-        int value = 0;
         private static ServiceConfiguration config = null;
-        private GatewayService(int value)
-        {
-            value = 5;
-        }
+        private static DataCache cache = null;
 
         public GatewayService()
         {
@@ -25,24 +23,26 @@ namespace JCDecauxSoapGateway
             {
                 GatewayService.config = new ServiceConfiguration("config.json");
             }
+
+            if (cache == null)
+            {
+                GatewayService.cache = new DataCache(GatewayService.config);
+                //List<Contract> contracts = cache.getContracts();
+            }
         }
 
-        public string GetStations(string city)
+        public Contract[] GetContracts()
         {
-            return value + " Function not implemented";
+            Contract[] contracts = GatewayService.cache.getContracts();
+            //System.Diagnostics.Debug.WriteLine("IN GS " + contracts);
+            return contracts;
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string[] GetStations(string city)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            string[] arr = { "one", "two" };
+            return arr;
         }
+
     }
 }

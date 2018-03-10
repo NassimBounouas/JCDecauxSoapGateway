@@ -27,17 +27,16 @@ namespace JCDecauxSoapClient
 
         }
 
-        private void TextBox_Initialized(object sender, EventArgs e)
+        private void ComboBox_Initialized(object sender, EventArgs e)
         {
-            SoapGatewayClient gateway = new SoapGatewayClient();
-            CompositeType com = new CompositeType();
-            com.StringValue = "Nassim";
-            com.BoolValue = true;
-            
 
-            CompositeType compo = gateway.GetDataUsingDataContract(com);
-            Console.WriteLine(compo.StringValue);
-            ((TextBox)sender).Text = gateway.GetStations("wawa");
+            SoapGatewayClient gateway = new SoapGatewayClient();
+            Contract[] contracts = gateway.GetContracts();
+            foreach (Contract contract in contracts)
+            {
+                ((ComboBox)sender).Items.Add(contract.name);
+            }
+                ((ComboBox)sender).SelectedIndex = 0;
             gateway.Close();
         }
     }

@@ -4,7 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:52428/GatewayService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:52428/GatewayService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:52428/GatewayService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway" />
+      <xsd:import schemaLocation="http://localhost:52428/GatewayService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:52428/GatewayService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway.JcDecauxObjects" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="SoapGateway_GetStations_InputMessage">
@@ -13,20 +14,20 @@
   <wsdl:message name="SoapGateway_GetStations_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStationsResponse" />
   </wsdl:message>
-  <wsdl:message name="SoapGateway_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  <wsdl:message name="SoapGateway_GetContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContracts" />
   </wsdl:message>
-  <wsdl:message name="SoapGateway_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  <wsdl:message name="SoapGateway_GetContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractsResponse" />
   </wsdl:message>
   <wsdl:portType name="SoapGateway">
     <wsdl:operation name="GetStations">
       <wsdl:input wsaw:Action="http://tempuri.org/SoapGateway/GetStations" message="tns:SoapGateway_GetStations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/SoapGateway/GetStationsResponse" message="tns:SoapGateway_GetStations_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/SoapGateway/GetDataUsingDataContract" message="tns:SoapGateway_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/SoapGateway/GetDataUsingDataContractResponse" message="tns:SoapGateway_GetDataUsingDataContract_OutputMessage" />
+    <wsdl:operation name="GetContracts">
+      <wsdl:input wsaw:Action="http://tempuri.org/SoapGateway/GetContracts" message="tns:SoapGateway_GetContracts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SoapGateway/GetContractsResponse" message="tns:SoapGateway_GetContracts_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_SoapGateway" type="tns:SoapGateway">
@@ -40,8 +41,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/SoapGateway/GetDataUsingDataContract" style="document" />
+    <wsdl:operation name="GetContracts">
+      <soap:operation soapAction="http://tempuri.org/SoapGateway/GetContracts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

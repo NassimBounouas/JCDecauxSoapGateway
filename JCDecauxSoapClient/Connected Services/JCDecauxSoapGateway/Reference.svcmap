@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:52428/GatewayService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="GatewayService3.xsd" MetadataType="Schema" ID="049a6bd9-d520-46e5-a677-fe9c19157869" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd3" />
     <MetadataFile FileName="GatewayService.xsd" MetadataType="Schema" ID="6f9e3990-4a3c-414c-bcc8-062e21b68e43" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd2" />
-    <MetadataFile FileName="GatewayService.wsdl" MetadataType="Wsdl" ID="ca7ac6c8-943f-4e54-8dbf-6b15a17fb1ed" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?wsdl" />
     <MetadataFile FileName="GatewayService1.xsd" MetadataType="Schema" ID="5955ad0a-6911-46bd-8303-77683ba205bd" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd1" />
     <MetadataFile FileName="GatewayService2.xsd" MetadataType="Schema" ID="ac175b3c-17ea-44dc-9f4d-d1db19f6848a" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GatewayService.wsdl" MetadataType="Wsdl" ID="ca7ac6c8-943f-4e54-8dbf-6b15a17fb1ed" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
