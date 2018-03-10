@@ -34,9 +34,10 @@ namespace JCDecauxSoapClient
             Contract[] contracts = gateway.GetContracts();
             foreach (Contract contract in contracts)
             {
-                ((ComboBox)sender).Items.Add(contract.name);
+                ((ComboBox)sender).Items.Add(contract);
             }
-                ((ComboBox)sender).SelectedIndex = 0;
+            ((ComboBox)sender).SelectedIndex = 0;
+            ((ComboBox)sender).DisplayMemberPath = "name";
             gateway.Close();
         }
     }
