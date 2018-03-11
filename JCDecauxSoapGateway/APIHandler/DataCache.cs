@@ -9,6 +9,7 @@ namespace JCDecauxSoapGateway.APIHandler
     {
         private RestCaller caller;
         private List<Contract> contracts;
+        public static Dictionary<String, int> callsOnStation = new Dictionary<String, int>();
 
         public DataCache(ServiceConfiguration config)
         {
@@ -34,7 +35,8 @@ namespace JCDecauxSoapGateway.APIHandler
         public Station GetStationFromCache(Station station, int cacheTimeInMinutes)
         {
             ObjectCache cache = MemoryCache.Default;
-            if (cache.Contains(station.name))
+            countACall(station);
+            if (cache.Contains(station.name) && callsOnStation[station.name] < (station.available_bikes / 2))
             {
                 System.Diagnostics.Debug.WriteLine(DateTime.Now + " - CALL FROM CACHE - " + station.contract_name + " " + station.name);
                 return cache.Get(station.name) as Station;
@@ -47,9 +49,16 @@ namespace JCDecauxSoapGateway.APIHandler
                 CacheItemPolicy cacheItemPolicy = new CacheItemPolicy();
                 cacheItemPolicy.AbsoluteExpiration = DateTime.Now.AddMinutes(cacheTimeInMinutes);
                 cache.Add(s.name, s, cacheItemPolicy);
-
+                callsOnStation[s.name] = 1;
                 return s;
             }
+        }
+
+        public static void countACall(Station s)
+        {
+            if (callsOnStation.ContainsKey(s.name))
+                callsOnStation[s.name]++;
+            else callsOnStation.Add(s.name, 1);
         }
     }
 }
