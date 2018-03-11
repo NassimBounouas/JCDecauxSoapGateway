@@ -26,14 +26,12 @@ namespace JCDecauxSoapGateway
             if (cache == null)
             {
                 GatewayService.cache = new DataCache(GatewayService.config);
-                //List<Contract> contracts = cache.getContracts();
             }
         }
 
         public Contract[] GetContracts()
         {
             Contract[] contracts = GatewayService.cache.GetContracts();
-            //System.Diagnostics.Debug.WriteLine("IN GS " + contracts);
             return contracts;
         }
 
