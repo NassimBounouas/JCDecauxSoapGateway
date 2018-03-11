@@ -1,5 +1,4 @@
 ﻿using JCDecauxSoapGateway.APIHandler;
-using JCDecauxSoapGateway.JcDecauxObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ namespace JCDecauxSoapGateway
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class GatewayService : SoapGateway
+    public class GatewayService : ISoapGateway
     {
         private static ServiceConfiguration config = null;
         private static DataCache cache = null;
@@ -33,16 +32,14 @@ namespace JCDecauxSoapGateway
 
         public Contract[] GetContracts()
         {
-            Contract[] contracts = GatewayService.cache.getContracts();
+            Contract[] contracts = GatewayService.cache.GetContracts();
             //System.Diagnostics.Debug.WriteLine("IN GS " + contracts);
             return contracts;
         }
 
-        public string[] GetStations(string city)
+        public Station[] GetStations(Contract contract)
         {
-            string[] arr = { "one", "two" };
-            return arr;
+            return GatewayService.cache.GetStations(contract);
         }
-
     }
 }

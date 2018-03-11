@@ -1,5 +1,4 @@
-﻿using JCDecauxSoapGateway.JcDecauxObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,11 +16,15 @@ namespace JCDecauxSoapGateway.APIHandler
             this.caller = new RestCaller(config);
         }
 
-        public Contract[] getContracts()
+        public Contract[] GetContracts()
         {
-            this.contracts = this.caller.getContracts();
-            System.Diagnostics.Debug.WriteLine("First contract in DATACACHE " + this.contracts.Count);
+            this.contracts = this.caller.GetContracts();
             return this.contracts.ToArray();
+        }
+
+        public Station[] GetStations(Contract contrat)
+        {
+           return this.caller.GetStations(contrat).ToArray();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JCDecauxSoapClient.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using JCDecauxSoapClient.JCDecauxSoapGateway;
 
 namespace JCDecauxSoapClient
 {
@@ -24,19 +24,19 @@ namespace JCDecauxSoapClient
         public MainWindow()
         {
             InitializeComponent();
-
+            comboBoxCities.SelectedIndex = 0;
+            comboBoxStations.SelectedIndex = 0;
         }
 
         private void ComboBox_Initialized(object sender, EventArgs e)
         {
-
-            SoapGatewayClient gateway = new SoapGatewayClient();
+            
+            SoapGatewayClient gateway = new SoapGatewayClient();        
             Contract[] contracts = gateway.GetContracts();
             foreach (Contract contract in contracts)
             {
                 ((ComboBox)sender).Items.Add(contract);
             }
-            ((ComboBox)sender).SelectedIndex = 0;
             ((ComboBox)sender).DisplayMemberPath = "name";
             gateway.Close();
         }
@@ -44,7 +44,20 @@ namespace JCDecauxSoapClient
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string name = ((Contract)((ComboBox)sender).SelectedItem).name;
-            Console.WriteLine(name + " has been selected");
+            SoapGatewayClient gateway = new SoapGatewayClient();
+
+            if(comboBoxStations != null)
+            {
+                comboBoxStations.Items.Clear();
+                foreach (Station station in gateway.GetStations(((Contract)((ComboBox)sender).SelectedItem)))
+                {
+                    comboBoxStations.Items.Add(station);
+                }
+                comboBoxStations.DisplayMemberPath = "name";
+                comboBoxStations.SelectedIndex = 0;
+            }
+            
+            gateway.Close();
         }
     }
 }

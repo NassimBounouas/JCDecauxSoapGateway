@@ -64,7 +64,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Connected Services\JCDecauxSoapGateway\Reference.cs">
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -92,20 +92,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService.wsdl" />
-    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Connected Services\ServiceReference1\GatewayService.wsdl" />
+    <None Include="Connected Services\ServiceReference1\JCDecauxSoapClient.ServiceReference1.Contract.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\GatewayService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\JCDecauxSoapGateway\JCDecauxSoapClient.JCDecauxSoapGateway.Contract.datasource">
+    <None Include="Connected Services\ServiceReference1\JCDecauxSoapClient.ServiceReference1.Station.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -120,16 +111,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\JCDecauxSoapGateway\" />
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\JCDecauxSoapGateway\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\JCDecauxSoapGateway\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\JCDecauxSoapGateway\Reference.svcmap">
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

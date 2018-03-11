@@ -75,7 +75,8 @@
     </Compile>
     <Compile Include="configuration\ServiceConfiguration.cs" />
     <Compile Include="JcDecauxObjects\Contract.cs" />
-    <Compile Include="SoapGateway.cs" />
+    <Compile Include="JcDecauxObjects\Station.cs" />
+    <Compile Include="ISoapGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

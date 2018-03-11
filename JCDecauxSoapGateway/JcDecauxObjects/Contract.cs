@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 
-namespace JCDecauxSoapGateway.JcDecauxObjects
+namespace JCDecauxSoapGateway
 {
     [DataContract]
     public class Contract
