@@ -5,12 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JCDecauxSoapClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="529.333" Width="525">
-    <Grid>
+        Title="MainWindow" Height="307.333" Width="525">
+    <Grid Margin="0,0,0,4">
         <ComboBox x:Name="comboBoxCities" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="497" Initialized="ComboBox_Initialized" SelectionChanged="ComboBox_SelectionChanged"/>
         <Label Content="Choose a city :" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
         <Label Content="Choose a station :&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="26"/>
-        <ComboBox x:Name="comboBoxStations" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="497"/>
+        <ComboBox x:Name="comboBoxStations" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="497" SelectionChanged="comboBoxStations_SelectionChanged"/>
+        <Label x:Name="label" Content="Address :" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="75" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Status :" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="58" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="label2" Content="Available stands :" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="124" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="label3" Content="Available bikes :" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Width="118" FontWeight="Bold" FontSize="14"/>
+        <Label x:Name="statusLabel" Content="Label" HorizontalAlignment="Left" Margin="71,119,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="availableStandsLabel" Content="Label" HorizontalAlignment="Left" Margin="134,153,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="availabelBikesLabel" Content="Label" HorizontalAlignment="Left" Margin="128,187,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock x:Name="addressBlock" HorizontalAlignment="Left" Margin="85,221,0,0" TextWrapping="WrapWithOverflow" Text="TextBlock" VerticalAlignment="Top" FontSize="14" Width="422" Height="50"/>
 
     </Grid>
 </Window>

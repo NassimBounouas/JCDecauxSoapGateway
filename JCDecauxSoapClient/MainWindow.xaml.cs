@@ -59,5 +59,23 @@ namespace JCDecauxSoapClient
             
             gateway.Close();
         }
+
+        private void comboBoxStations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {          
+            Station s = (sender as ComboBox).SelectedItem as Station;
+            if (s != null)
+            {
+                if(String.IsNullOrEmpty(s.address.Trim()))
+                {
+                    addressBlock.Text = "No address specified";
+                } else
+                {
+                    addressBlock.Text = s.address;
+                }
+                statusLabel.Content = s.status;
+                availableStandsLabel.Content = s.available_bike_stands + " / " + s.bike_stands;
+                availabelBikesLabel.Content = s.available_bikes;
+            }
+        }
     }
 }
