@@ -40,5 +40,16 @@ namespace JCDecauxSoapGateway.APIHandler
             string responseFromServer = reader.ReadToEnd();
             return JsonConvert.DeserializeObject<List<Station>>(responseFromServer);
         }
+
+        public Station GetStationInfo(Station s)
+        {            
+            WebRequest request = WebRequest.Create("https://api.jcdecaux.com/vls/v1/stations/" + s.number + "?contract="+ s.contract_name + "&apiKey=" + this.apiKey);
+            WebResponse response = request.GetResponse();
+            Stream dataStream = response.GetResponseStream();
+            StreamReader reader = new StreamReader(dataStream);
+
+            string responseFromServer = reader.ReadToEnd();
+            return JsonConvert.DeserializeObject<Station>(responseFromServer);
+        }
     }
 }

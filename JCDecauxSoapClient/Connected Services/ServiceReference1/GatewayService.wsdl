@@ -29,6 +29,20 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
+      <xs:element name="GetStationInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway" minOccurs="0" name="station" nillable="true" type="q4:Station" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStationInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/JCDecauxSoapGateway" minOccurs="0" name="GetStationInfoResult" nillable="true" type="q5:Station" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
     </xs:schema>
     <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="anyType" nillable="true" type="xs:anyType" />
@@ -123,6 +137,12 @@
   <wsdl:message name="ISoapGateway_GetStations_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetStationsResponse" />
   </wsdl:message>
+  <wsdl:message name="ISoapGateway_GetStationInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISoapGateway_GetStationInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationInfoResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISoapGateway">
     <wsdl:operation name="GetContracts">
       <wsdl:input wsaw:Action="http://tempuri.org/ISoapGateway/GetContracts" message="tns:ISoapGateway_GetContracts_InputMessage" />
@@ -131,6 +151,10 @@
     <wsdl:operation name="GetStations">
       <wsdl:input wsaw:Action="http://tempuri.org/ISoapGateway/GetStations" message="tns:ISoapGateway_GetStations_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISoapGateway/GetStationsResponse" message="tns:ISoapGateway_GetStations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStationInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISoapGateway/GetStationInfo" message="tns:ISoapGateway_GetStationInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISoapGateway/GetStationInfoResponse" message="tns:ISoapGateway_GetStationInfo_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISoapGateway" type="tns:ISoapGateway">
@@ -146,6 +170,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetStations">
       <soap:operation soapAction="http://tempuri.org/ISoapGateway/GetStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStationInfo">
+      <soap:operation soapAction="http://tempuri.org/ISoapGateway/GetStationInfo" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

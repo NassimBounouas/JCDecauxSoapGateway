@@ -26,5 +26,10 @@ namespace JCDecauxSoapGateway.APIHandler
         {
            return this.caller.GetStations(contrat).ToArray();
         }
+
+        public Station GetStationInfo(Station station)
+        {
+            return this.caller.GetStationInfo(station);
+        }
     }
 }

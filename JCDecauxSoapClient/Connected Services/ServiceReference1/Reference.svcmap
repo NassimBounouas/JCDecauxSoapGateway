@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd135489-c99d-44e7-81fc-e718f4335020" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1e4826e5-f20d-4a08-8820-eec800415b91" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="http://localhost:52428/GatewayService.svc?singleWsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GatewayService.wsdl" MetadataType="Wsdl" ID="5496caad-4ed9-42ef-b6f6-146dd94923f0" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?singleWsdl" />
+    <MetadataFile FileName="GatewayService.wsdl" MetadataType="Wsdl" ID="577cc41b-ec56-4b75-96af-4988cd0e5372" SourceId="1" SourceUrl="http://localhost:52428/GatewayService.svc?singleWsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

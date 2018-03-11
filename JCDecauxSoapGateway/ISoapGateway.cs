@@ -19,5 +19,7 @@ namespace JCDecauxSoapGateway
         [OperationContract]
         Station[] GetStations(Contract contract);
 
+        [OperationContract]
+        Station GetStationInfo(Station station);
     }
 }

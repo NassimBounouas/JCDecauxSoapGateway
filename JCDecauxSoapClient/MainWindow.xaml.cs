@@ -65,6 +65,13 @@ namespace JCDecauxSoapClient
             Station s = (sender as ComboBox).SelectedItem as Station;
             if (s != null)
             {
+                SoapGatewayClient gateway = new SoapGatewayClient();
+                s = gateway.GetStationInfo(s);
+                gateway.Close();
+            }
+
+            if (s != null)
+            {
                 if(String.IsNullOrEmpty(s.address.Trim()))
                 {
                     addressBlock.Text = "No address specified";

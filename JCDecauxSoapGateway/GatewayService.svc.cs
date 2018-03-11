@@ -37,6 +37,11 @@ namespace JCDecauxSoapGateway
             return contracts;
         }
 
+        public Station GetStationInfo(Station station)
+        {
+            return GatewayService.cache.GetStationInfo(station);
+        }
+
         public Station[] GetStations(Contract contract)
         {
             return GatewayService.cache.GetStations(contract);

@@ -326,6 +326,12 @@ namespace JCDecauxSoapClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISoapGateway/GetStations", ReplyAction="http://tempuri.org/ISoapGateway/GetStationsResponse")]
         System.Threading.Tasks.Task<JCDecauxSoapClient.ServiceReference1.Station[]> GetStationsAsync(JCDecauxSoapClient.ServiceReference1.Contract contract);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISoapGateway/GetStationInfo", ReplyAction="http://tempuri.org/ISoapGateway/GetStationInfoResponse")]
+        JCDecauxSoapClient.ServiceReference1.Station GetStationInfo(JCDecauxSoapClient.ServiceReference1.Station station);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISoapGateway/GetStationInfo", ReplyAction="http://tempuri.org/ISoapGateway/GetStationInfoResponse")]
+        System.Threading.Tasks.Task<JCDecauxSoapClient.ServiceReference1.Station> GetStationInfoAsync(JCDecauxSoapClient.ServiceReference1.Station station);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -369,6 +375,14 @@ namespace JCDecauxSoapClient.ServiceReference1 {
         
         public System.Threading.Tasks.Task<JCDecauxSoapClient.ServiceReference1.Station[]> GetStationsAsync(JCDecauxSoapClient.ServiceReference1.Contract contract) {
             return base.Channel.GetStationsAsync(contract);
+        }
+        
+        public JCDecauxSoapClient.ServiceReference1.Station GetStationInfo(JCDecauxSoapClient.ServiceReference1.Station station) {
+            return base.Channel.GetStationInfo(station);
+        }
+        
+        public System.Threading.Tasks.Task<JCDecauxSoapClient.ServiceReference1.Station> GetStationInfoAsync(JCDecauxSoapClient.ServiceReference1.Station station) {
+            return base.Channel.GetStationInfoAsync(station);
         }
     }
 }
