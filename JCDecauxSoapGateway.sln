@@ -10,6 +10,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCDecauxSoapClient", "JCDec
 		{03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8} = {03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCDecauxSoapConsoleClient", "JCDecauxSoapConsoleClient\JCDecauxSoapConsoleClient.csproj", "{DD47247F-8F74-4CB1-95D7-9BC4F78E68CD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8} = {03BEF4BE-32AD-4F3B-ACD7-791D82A1D3B8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +29,10 @@ Global
 		{CE3F4BD9-C375-4EE1-B4B6-6A387D9948C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE3F4BD9-C375-4EE1-B4B6-6A387D9948C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE3F4BD9-C375-4EE1-B4B6-6A387D9948C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD47247F-8F74-4CB1-95D7-9BC4F78E68CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD47247F-8F74-4CB1-95D7-9BC4F78E68CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD47247F-8F74-4CB1-95D7-9BC4F78E68CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD47247F-8F74-4CB1-95D7-9BC4F78E68CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
