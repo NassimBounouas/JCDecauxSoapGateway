@@ -75,6 +75,8 @@
       <DependentUpon>GatewayService.svc</DependentUpon>
     </Compile>
     <Compile Include="configuration\ServiceConfiguration.cs" />
+    <Compile Include="ISubscribeService.cs" />
+    <Compile Include="ISubscribeServiceEvents.cs" />
     <Compile Include="JcDecauxObjects\Contract.cs" />
     <Compile Include="JcDecauxObjects\Station.cs" />
     <Compile Include="ISoapGateway.cs" />
