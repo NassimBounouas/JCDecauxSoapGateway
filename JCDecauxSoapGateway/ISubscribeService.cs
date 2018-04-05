@@ -10,6 +10,6 @@ namespace JCDecauxSoapGateway
     public interface ISubscribeService
     {
         [OperationContract]
-        void Subscribe(Contract c, int time);
+        void Subscribe(Contract c, Station s,  int time);
     }
 }
